@@ -11,11 +11,11 @@ import { faGithub, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-i
 import { ME } from "./constants"
 
 const socials = [
-  { icon: faGithub,     label: "GitHub",   href: ME.github },
-  { icon: faLinkedin,   label: "LinkedIn", href: ME.linkedin },
-  { icon: faXTwitter,   label: "Twitter",  href: ME.twitter },
-  { icon: faEnvelope,   label: "Mail",     href: `mailto:${ME.email}` },
-  { icon: faPaperclip,  label: "Resume",   href: ME.resume },
+  { icon: faGithub, label: "GitHub", href: ME.github },
+  { icon: faLinkedin, label: "LinkedIn", href: ME.linkedin },
+  { icon: faXTwitter, label: "Twitter", href: ME.twitter },
+  { icon: faEnvelope, label: "Mail", href: `mailto:${ME.email}` },
+  { icon: faPaperclip, label: "Resume", href: ME.resume },
 ]
 
 const ROLES = [
@@ -48,24 +48,20 @@ function AnimatedRole() {
 }
 
 export function Hero() {
-  const [views, setViews] = useState(11916)
+  const [views, setViews] = useState(0)
 
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem("portfolio_hero_views")
-      if (!stored) {
-        localStorage.setItem("portfolio_hero_views", "11916")
-        setViews(11916)
-      } else {
-        const next = Math.max(11916, parseInt(stored, 10) + 1)
-        localStorage.setItem("portfolio_hero_views", String(next))
-        setViews(next)
-      }
-    } catch {
-      setViews(11916)
-    }
-  }, [])
+useEffect(() => {
+  try {
+    const stored = localStorage.getItem("portfolio_hero_views")
+    const currentViews = stored ? Number(stored) : 0
+    const updatedViews = currentViews + 1
 
+    localStorage.setItem("portfolio_hero_views", String(updatedViews))
+    setViews(updatedViews)
+  } catch {
+    setViews(0)
+  }
+}, [])
   return (
     <div className="hero" id="home">
       <div className="hero-banner">
