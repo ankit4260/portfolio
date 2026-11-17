@@ -1,32 +1,98 @@
-# React + TypeScript + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A personal portfolio website built to showcase my skills, projects, education, and development journey. Designed with a clean interface and responsive layout.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend:** React.js, TypeScript
+- **Styling:** CSS
+- **Build Tool:** Vite
+- **Icons:** Font Awesome
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Hero Section** – Introduction and personal overview.
+- **About & Education** – Academic background and journey.
+- **Tech Stack** – Technologies and tools I work with.
+- **Projects** – Showcase of personal and development projects.
+- **Activity Heatmap** – Visual representation of coding activity.
+- **Thoughts** – Share ideas and thoughts.
+- **Contact Section** – Connect with me.
+- **Dark/Light Mode** – Theme switching functionality.
+- **Responsive Design** – Optimized for different screen sizes.
 
-## Expanding the Oxlint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```text
+portfolio/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── Activity.tsx
+│   ├── App.css
+│   ├── App.tsx
+│   ├── constants.ts
+│   ├── Contact.tsx
+│   ├── Education.tsx
+│   ├── Heatmap.tsx
+│   ├── Hero.tsx
+│   ├── index.css
+│   ├── Layout.tsx
+│   ├── main.tsx
+│   ├── Nav.tsx
+│   ├── Projects.tsx
+│   ├── Stack.tsx
+│   ├── Thought.tsx
+│   └── useTheme.ts
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## ⚙️ Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/USERNAME/portfolio.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd portfolio
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL provided by Vite in your browser.
+
+### 5. Build for production
+
+```bash
+npm run build
+```
+
+## 👨‍💻 Author
+
+**Ankit Choudhary**
+
+- GitHub: [@ankit4260](https://github.com/ankit4260)
+- LinkedIn: [Ankit Choudhary](https://www.linkedin.com/in/ankitchoudhary4260)
+
+---
+
+⭐ If you like this project, consider giving it a star!
